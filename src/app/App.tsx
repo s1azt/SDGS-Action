@@ -8,6 +8,7 @@ import { ExperienceSection } from './components/ExperienceSection';
 import { BenefitsSection } from './components/BenefitsSection';
 import { ComplianceSection } from './components/ComplianceSection';
 import { SDGsSection } from './components/SDGsSection';
+import { ExternalPRSection } from './components/ExternalPRSection';
 import { EngagementSection } from './components/EngagementSection';
 import { ImpactSection } from './components/ImpactSection';
 import { ClosingSection } from './components/ClosingSection';
@@ -15,7 +16,7 @@ import { NavigationDots } from './components/NavigationDots';
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState(0);
-  const totalSections = 12;
+  const totalSections = 13;
 
   useEffect(() => {
     const handleScroll = (e: WheelEvent) => {
@@ -59,6 +60,7 @@ export default function App() {
         <BenefitsSection />
         <ComplianceSection />
         <SDGsSection />
+        <ExternalPRSection />
         <EngagementSection />
         <ImpactSection />
         <ClosingSection />
