@@ -11,12 +11,13 @@ import { SDGsSection } from './components/SDGsSection';
 import { ExternalPRSection } from './components/ExternalPRSection';
 import { EngagementSection } from './components/EngagementSection';
 import { ImpactSection } from './components/ImpactSection';
+import { CO2CalculationSection } from './components/CO2CalculationSection';
 import { ClosingSection } from './components/ClosingSection';
 import { NavigationDots } from './components/NavigationDots';
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState(0);
-  const totalSections = 13;
+  const totalSections = 14;
 
   useEffect(() => {
     const handleScroll = (e: WheelEvent) => {
@@ -63,6 +64,7 @@ export default function App() {
         <ExternalPRSection />
         <EngagementSection />
         <ImpactSection />
+        <CO2CalculationSection />
         <ClosingSection />
       </div>
       <NavigationDots 
