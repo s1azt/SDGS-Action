@@ -3,10 +3,10 @@ import { DollarSign, Users, Zap, TrendingUp, Calculator } from 'lucide-react';
 
 export function ImpactSection() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 w-full py-4">
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-100 overflow-hidden py-12">
+      <div className="max-w-7xl mx-auto px-8 w-full">
         <motion.h2
-          className="text-4xl font-bold text-center text-gray-800 mb-4"
+          className="text-3xl font-bold text-center text-gray-800 mb-6"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -152,21 +152,21 @@ export function ImpactSection() {
 
         {/* CO2 Calculation Detail */}
         <motion.div
-          className="bg-white rounded-3xl p-6 shadow-2xl mb-4"
+          className="bg-white rounded-3xl p-5 shadow-2xl mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           viewport={{ once: false }}
         >
-          <div className="flex items-center gap-3 mb-4">
-            <Calculator className="w-8 h-8 text-indigo-600" />
-            <h3 className="text-2xl font-bold text-gray-800">月間CO2削減量の計算根拠</h3>
+          <div className="flex items-center gap-3 mb-3">
+            <Calculator className="w-7 h-7 text-indigo-600" />
+            <h3 className="text-xl font-bold text-gray-800">月間CO2削減量の計算根拠</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-5">
             {/* Left: Assumptions */}
-            <div className="space-y-3">
-              <div className="font-bold text-lg text-gray-800 mb-3">📋 前提条件</div>
+            <div className="space-y-2">
+              <div className="font-bold text-base text-gray-800 mb-2">📋 前提条件</div>
               
               <motion.div
                 className="bg-blue-50 rounded-xl p-4"
@@ -213,63 +213,63 @@ export function ImpactSection() {
             </div>
 
             {/* Right: Calculation */}
-            <div className="space-y-3">
-              <div className="font-bold text-lg text-gray-800 mb-3">🧮 計算式</div>
+            <div className="space-y-2">
+              <div className="font-bold text-base text-gray-800 mb-2">🧮 計算式</div>
               
               <motion.div
-                className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-4 border-2 border-cyan-200"
+                className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-3 border-2 border-cyan-200"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
                 viewport={{ once: false }}
               >
-                <div className="text-sm text-gray-700 mb-3">
-                  <div className="font-bold mb-2">ステップ1: 月間総発電量</div>
-                  <div className="bg-white rounded-lg p-3 font-mono text-sm">
+                <div className="text-sm text-gray-700 mb-2">
+                  <div className="font-bold mb-1">ステップ1: 月間総発電量</div>
+                  <div className="bg-white rounded-lg p-2 font-mono text-xs">
                     <div>5人 × 8.3Wh × 25日 = 1,037.5Wh</div>
                     <div className="text-xs text-gray-500 mt-1">= 1.0375kWh</div>
                   </div>
                 </div>
 
-                <div className="flex justify-center my-2">
+                <div className="flex justify-center my-1">
                   <motion.div
                     animate={{ y: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="text-2xl"
+                    className="text-xl"
                   >
                     👇
                   </motion.div>
                 </div>
 
                 <div className="text-sm text-gray-700">
-                  <div className="font-bold mb-2">ステップ2: CO2削減量</div>
-                  <div className="bg-white rounded-lg p-3 font-mono text-sm">
+                  <div className="font-bold mb-1">ステップ2: CO2削減量</div>
+                  <div className="bg-white rounded-lg p-2 font-mono text-xs">
                     <div>1.0375kWh × 0.5kg-CO2/kWh</div>
-                    <div className="text-lg font-bold text-green-600 mt-2">= 0.51875kg-CO2</div>
+                    <div className="text-base font-bold text-green-600 mt-1">= 0.51875kg-CO2</div>
                     <div className="text-xs text-gray-500 mt-1">≈ 0.5kg（月間）</div>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl p-4 text-white text-center"
+                className="bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl p-3 text-white text-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="text-sm font-semibold mb-1">年間換算</div>
-                <div className="text-3xl font-bold">約6.2kg</div>
+                <div className="text-xs font-semibold mb-1">年間換算</div>
+                <div className="text-2xl font-bold">約6.2kg</div>
                 <div className="text-xs opacity-90 mt-1">0.5kg × 12ヶ月</div>
               </motion.div>
             </div>
           </div>
 
           <motion.div
-            className="mt-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl p-4 text-center"
+            className="mt-3 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl p-3 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1 }}
             viewport={{ once: false }}
           >
-            <div className="text-sm text-gray-700">
+            <div className="text-xs text-gray-700">
               💡 <span className="font-bold">参考:</span> これは、ペットボトル約115本分のリサイクル効果に相当します
             </div>
           </motion.div>
@@ -277,28 +277,28 @@ export function ImpactSection() {
 
         {/* ROI summary */}
         <motion.div
-          className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 rounded-3xl p-8 text-white shadow-2xl text-center"
+          className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 rounded-3xl p-6 text-white shadow-2xl text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
           whileHover={{ scale: 1.02 }}
           viewport={{ once: false }}
         >
-          <h4 className="text-3xl font-bold mb-4">投資対効果まとめ</h4>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h4 className="text-2xl font-bold mb-3">投資対効果まとめ</h4>
+          <div className="grid md:grid-cols-3 gap-4">
             <div>
-              <div className="text-5xl mb-2">💰</div>
-              <div className="text-xl font-semibold">低コスト導入</div>
+              <div className="text-4xl mb-1">💰</div>
+              <div className="text-lg font-semibold">低コスト導入</div>
               <div className="text-sm opacity-90">10〜20万円で開始</div>
             </div>
             <div>
-              <div className="text-5xl mb-2">📈</div>
-              <div className="text-xl font-semibold">多面的効果</div>
+              <div className="text-4xl mb-1">📈</div>
+              <div className="text-lg font-semibold">多面的効果</div>
               <div className="text-sm opacity-90">健康×環境×技術</div>
             </div>
             <div>
-              <div className="text-5xl mb-2">✨</div>
-              <div className="text-xl font-semibold">高い波及効果</div>
+              <div className="text-4xl mb-1">✨</div>
+              <div className="text-lg font-semibold">高い波及効果</div>
               <div className="text-sm opacity-90">社内コミュニケーション活性化</div>
             </div>
           </div>
