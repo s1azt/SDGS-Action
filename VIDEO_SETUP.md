@@ -84,10 +84,11 @@
   poster="/bike-thumbnail.jpg"  /* オプション: サムネイル画像 */
 >
   <source
-    src="/bike-video.mp4"  /* ← ここを変更！ */
+    src="./bike-video.mp4"  /* ← ここを変更！ */
     type="video/mp4"
   />
   {/* フォールバック */}
+  <img src="/fallback-image.jpg" alt="エアロバイク" />
 </video>
 ```
 
@@ -99,7 +100,7 @@
 
 1. **src属性**  
    ```tsx
-   src="/bike-video.mp4"
+   src="./bike-video.mp4"
    ```
    `/public/bike-video.mp4` に配置した動画のパス
 
@@ -166,7 +167,7 @@ Windowsサーバーにデプロイする場合：
 
 **A:** 以下を確認してください：
 - `muted={true}` になっているか（ブラウザは音声なしの動画のみ自動再生を許可）
-- `autoPlay` と `playsInline` 属性���設定されているか
+- `autoPlay` と `playsInline` 属性設定されているか
 
 ### **Q3: 動画のサイズが大きすぎる**
 

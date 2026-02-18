@@ -106,7 +106,7 @@ export function SolutionSection() {
                    例: /public/bike-video.mp4
                 
                 2. 下記の src を変更
-                   src="/bike-video.mp4"
+                   src="./bike-video.mp4"
                 
                 対応形式: MP4, WebM, OGG
                 推奨サイズ: 1920x1080 または 1280x720
@@ -125,7 +125,7 @@ export function SolutionSection() {
               >
                 {/* 動画（差し替え可能） */}
                 <source
-                  src="/bike-video.mp4"  
+                  src="./bike-video.mp4"  
                   type="video/mp4"
                 />
                 {/* フォールバック: 動画が読み込めない場合は画像を表示 */}
